@@ -4,7 +4,7 @@ import * as actionTypes from './types';
 import axios from "axios";
 
 export const createOrder = (order) => (dispatch) => {
-    axios.post("http://localhost:5000/order", order).then(response => {
+    axios.post("api/order", order).then(response => {  //http://localhost:5000/order", order).then(response => {
         console.log(response);
         dispatch({
             type: 'CREATE_ORDER',
